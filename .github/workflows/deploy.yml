@@ -32,6 +32,42 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          BASE_URL: /polimer-expert/
+
+      - name: Find HTML files in dist
+        run: find dist -name "*.html" -type f 2>/dev/null || echo "No HTML files found"
+
+      - name: List dist/client
+        run: ls -la dist/client/ 2>/dev/null || echo "dist/client not found"; ls -la dist/ 2>/dev/null
+
+      - name: Generate index.html if missing
+        run: |
+          if [ ! -f dist/client/index.html ]; then
+            echo "index.html not found — generating from template"
+            JS_FILE=$(ls dist/client/assets/*.js 2>/dev/null | head -1 | xargs basename 2>/dev/null || echo "")
+            CSS_FILE=$(ls dist/client/assets/*.css 2>/dev/null | head -1 | xargs basename 2>/dev/null || echo "")
+            mkdir -p dist/client
+            cat > dist/client/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="ru">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>Промышленные полы — Полимер Эксперт</title>
+            </head>
+            <body>
+              <div id="root"></div>
+            </body>
+          </html>
+          HTMLEOF
+            if [ -n "$CSS_FILE" ]; then
+              sed -i "s|</head>|  <link rel=\"stylesheet\" href=\"/polimer-expert/assets/$CSS_FILE\">\n</head>|" dist/client/index.html
+            fi
+            if [ -n "$JS_FILE" ]; then
+              sed -i "s|</body>|  <script type=\"module\" src=\"/polimer-expert/assets/$JS_FILE\"></script>\n</body>|" dist/client/index.html
+            fi
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
