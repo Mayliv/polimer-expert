@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Политика конфиденциальности — ПОЛИМЕР ЭКСПЕРТ</title>
+  <meta name="description" content="Политика конфиденциальности ООО НСТ «Полимер Эксперт». Обработка персональных данных на сайтах propolimerexpert.ru и prolaprolin.ru">
+  <meta name="robots" content="noindex, follow">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #FFC107;
+      --black: #111111;
+      --white: #ffffff;
+      --grey: #f5f5f5;
+      --text: #222222;
+      --muted: #666666;
+      --border: #e0e0e0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--white);
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--black);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-header__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .site-header__logo-text {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+    }
+    .site-header__logo-text span {
+      display: block;
+      font-size: 18px;
+    }
+    .site-header__back {
+      color: var(--yellow);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .site-header__back:hover { text-decoration: underline; }
+
+    /* Hero */
+    .doc-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px 24px 40px;
+      border-bottom: 3px solid var(--yellow);
+    }
+    .doc-hero__inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .doc-hero__label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 12px;
+    }
+    .doc-hero__title {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .doc-hero__meta {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+    .doc-hero__meta span { color: rgba(255,255,255,0.75); }
+
+    /* Content */
+    .doc-content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--grey);
+      border-left: 4px solid var(--yellow);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      border-radius: 0 8px 8px 0;
+    }
+    .toc__title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .toc__list {
+      list-style: none;
+      columns: 2;
+      column-gap: 24px;
+    }
+    @media (max-width: 600px) { .toc__list { columns: 1; } }
+    .toc__list li { margin-bottom: 6px; break-inside: avoid; }
+    .toc__list a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .toc__list a:hover { color: var(--black); text-decoration: underline; }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-section:last-child { border-bottom: none; }
+
+    .doc-section__title {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--black);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--yellow);
+      display: inline-block;
+    }
+
+    .doc-section p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .doc-section p:last-child { margin-bottom: 0; }
+
+    .doc-section ul, .doc-section ol {
+      margin: 10px 0 10px 20px;
+    }
+    .doc-section li {
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    /* Operator card */
+    .operator-card {
+      background: var(--grey);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+    .operator-card dl { display: grid; grid-template-columns: 180px 1fr; gap: 8px 16px; }
+    .operator-card dt { font-weight: 600; font-size: 14px; color: var(--muted); }
+    .operator-card dd { font-size: 14px; }
+    @media (max-width: 500px) {
+      .operator-card dl { grid-template-columns: 1fr; gap: 4px; }
+      .operator-card dt { margin-top: 8px; }
+    }
+
+    /* Info box */
+    .info-box {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .info-box strong { color: var(--black); }
+
+    /* Rights list */
+    .rights-list {
+      list-style: none;
+      margin: 12px 0;
+    }
+    .rights-list li {
+      padding: 10px 0 10px 32px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .rights-list li:last-child { border-bottom: none; }
+    .rights-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--yellow);
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    /* Update date */
+    .doc-footer {
+      margin-top: 48px;
+      padding: 24px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .doc-footer p { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+    .doc-footer strong { color: var(--white); }
+
+    a { color: var(--black); }
+    a:hover { color: #333; }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <a href="/" class="site-header__logo">
+    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5L90 25V55C90 75 72 90 50 97C28 90 10 75 10 55V25L50 5Z" stroke="white" stroke-width="6" fill="none"/>
+      <circle cx="50" cy="50" r="16" stroke="white" stroke-width="5" fill="none"/>
+      <line x1="50" y1="34" x2="50" y2="28" stroke="white" stroke-width="5" stroke-linecap="round"/>
+      <line x1="50" y1="66" x2="50" y2="72" stroke="white" stroke-width="5" stroke-linecap="round"/>
+      <line x1="34" y1="50" x2="28" y2="50" stroke="white" stroke-width="5" stroke-linecap="round"/>
+      <line x1="66" y1="50" x2="72" y2="50" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <div class="site-header__logo-text">
+      ПОЛИМЕР
+      <span>ЭКСПЕРТ</span>
+    </div>
+  </a>
+  <a href="/" class="site-header__back">← Вернуться на сайт</a>
+</header>
+
+<!-- Hero -->
+<div class="doc-hero">
+  <div class="doc-hero__inner">
+    <div class="doc-hero__label">Правовой документ</div>
+    <h1 class="doc-hero__title">Политика конфиденциальности</h1>
+    <p class="doc-hero__meta">
+      Распространяется на сайты
+      <span>propolimerexpert.ru</span> и <span>prolaprolin.ru</span>
+      &nbsp;·&nbsp; Версия от <span>май 2026</span>
+    </p>
+  </div>
+</div>
+
+<!-- Content -->
+<main class="doc-content">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <div class="toc__title">Содержание</div>
+    <ul class="toc__list">
+      <li><a href="#s1">1. Общие положения</a></li>
+      <li><a href="#s2">2. Основные понятия</a></li>
+      <li><a href="#s3">3. Состав персональных данных</a></li>
+      <li><a href="#s4">4. Цели обработки</a></li>
+      <li><a href="#s5">5. Правовые основания</a></li>
+      <li><a href="#s6">6. Сбор и хранение данных</a></li>
+      <li><a href="#s7">7. Передача третьим лицам</a></li>
+      <li><a href="#s8">8. Cookies и аналитика</a></li>
+      <li><a href="#s9">9. Права пользователей</a></li>
+      <li><a href="#s10">10. Защита данных</a></li>
+      <li><a href="#s11">11. Уведомление РКН</a></li>
+      <li><a href="#s12">12. Несовершеннолетние</a></li>
+      <li><a href="#s13">13. Изменение политики</a></li>
+      <li><a href="#s14">14. Контактная информация</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 1 -->
+  <div class="doc-section" id="s1">
+    <h2 class="doc-section__title">1. Общие положения</h2>
+    <p>1.1. Настоящая Политика конфиденциальности (далее — «Политика») разработана в соответствии с требованиями Федерального закона от 27.07.2006 № 152-ФЗ «О персональных данных», Федерального закона от 27.07.2006 № 149-ФЗ «Об информации, информационных технологиях и о защите информации», а также иных применимых нормативных правовых актов Российской Федерации.</p>
+    <p>1.2. Оператором персональных данных является:</p>
+    <div class="operator-card">
+      <dl>
+        <dt>Полное наименование</dt>
+        <dd>Общество с ограниченной ответственностью НАШИ СОВРЕМЕННЫЕ ТЕХНОЛОГИИ «ПОЛИМЕР ЭКСПЕРТ»</dd>
+        <dt>Сокращённое наименование</dt>
+        <dd>ООО НСТ «ПОЛИМЕР ЭКСПЕРТ»</dd>
+        <dt>ИНН</dt>
+        <dd>2308285521</dd>
+        <dt>ОГРН</dt>
+        <dd>1222300022340</dd>
+        <dt>Юридический адрес</dt>
+        <dd>350000, Краснодарский край, г. Краснодар, ул. им. Гоголя, д. 80</dd>
+        <dt>Сайты</dt>
+        <dd>prolaprolin.ru, propolimerexpert.ru</dd>
+      </dl>
+    </div>
+    <p>1.3. Политика распространяется на обработку персональных данных, получаемых Оператором через сайты propolimerexpert.ru и prolaprolin.ru (далее — «Сайты»).</p>
+    <p>1.4. Использование Сайтов означает безоговорочное согласие Пользователя с настоящей Политикой. Если Пользователь не согласен с условиями Политики, он обязан прекратить использование Сайтов.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="doc-section" id="s2">
+    <h2 class="doc-section__title">2. Основные понятия</h2>
+    <p><strong>Персональные данные</strong> — любая информация, относящаяся прямо или косвенно к определённому или определяемому физическому лицу (субъекту персональных данных).</p>
+    <p><strong>Оператор</strong> — ООО НСТ «ПОЛИМЕР ЭКСПЕРТ», самостоятельно или совместно с другими лицами организующее и осуществляющее обработку персональных данных.</p>
+    <p><strong>Обработка персональных данных</strong> — любое действие или совокупность действий с персональными данными: сбор, запись, систематизация, накопление, хранение, уточнение, извлечение, использование, передача, обезличивание, блокирование, удаление, уничтожение.</p>
+    <p><strong>Пользователь</strong> — физическое лицо, посещающее Сайты и/или оставляющее свои персональные данные через формы на Сайтах.</p>
+    <p><strong>Cookies</strong> — небольшие текстовые файлы, сохраняемые на устройстве Пользователя при посещении Сайтов.</p>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="doc-section" id="s3">
+    <h2 class="doc-section__title">3. Состав обрабатываемых персональных данных</h2>
+    <p>3.1. Оператор может обрабатывать следующие категории персональных данных Пользователей:</p>
+    <ul>
+      <li>фамилия, имя, отчество;</li>
+      <li>номер телефона;</li>
+      <li>адрес электронной почты;</li>
+      <li>наименование организации и должность (для корпоративных клиентов);</li>
+      <li>содержание обращений и сообщений, направленных через формы обратной связи;</li>
+      <li>технические данные: IP-адрес, тип и версия браузера, операционная система, страницы посещений, время посещений, реферальные ссылки;</li>
+      <li>данные файлов cookies и аналогичных технологий.</li>
+    </ul>
+    <p>3.2. Оператор не обрабатывает специальные категории персональных данных (расовая принадлежность, политические взгляды, религиозные убеждения, состояние здоровья, биометрические данные) через Сайты.</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="doc-section" id="s4">
+    <h2 class="doc-section__title">4. Цели обработки персональных данных</h2>
+    <p>4.1. Персональные данные обрабатываются в следующих целях:</p>
+    <ul>
+      <li>обработка входящих запросов и обращений Пользователей (обратная связь, заявки на услуги);</li>
+      <li>заключение и исполнение договоров с контрагентами;</li>
+      <li>информирование Пользователей об услугах, акциях и новостях Оператора (при наличии согласия);</li>
+      <li>улучшение функциональности Сайтов и качества обслуживания;</li>
+      <li>проведение статистических и аналитических исследований;</li>
+      <li>выполнение требований законодательства Российской Федерации;</li>
+      <li>защита прав и законных интересов Оператора.</li>
+    </ul>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="doc-section" id="s5">
+    <h2 class="doc-section__title">5. Правовые основания обработки</h2>
+    <p>5.1. Обработка персональных данных осуществляется на следующих правовых основаниях:</p>
+    <ul>
+      <li>согласие субъекта персональных данных (ст. 6, ст. 9 Федерального закона № 152-ФЗ) — при заполнении форм обратной связи, подписке на рассылку;</li>
+      <li>исполнение договора, стороной которого является субъект персональных данных;</li>
+      <li>законный интерес Оператора — для обеспечения безопасности Сайтов и анализа посещаемости;</li>
+      <li>исполнение обязанностей, предусмотренных законодательством РФ.</li>
+    </ul>
+    <p>5.2. Согласие на обработку персональных данных должно быть конкретным, информированным и сознательным. Согласие на обработку данных в целях продвижения товаров и услуг оформляется отдельно.</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="doc-section" id="s6">
+    <h2 class="doc-section__title">6. Порядок сбора и хранения персональных данных</h2>
+    <p>6.1. Персональные данные собираются следующими способами:</p>
+    <ul>
+      <li>при заполнении форм обратной связи, заявок и иных интерактивных форм на Сайтах;</li>
+      <li>при направлении электронных сообщений на адреса Оператора;</li>
+      <li>автоматически при посещении Сайтов (технические и cookie-данные).</li>
+    </ul>
+    <p>6.2. Персональные данные хранятся на серверах, расположенных на территории Российской Федерации, в соответствии с требованиями ст. 18.1 Федерального закона № 152-ФЗ.</p>
+    <p>6.3. Сроки хранения персональных данных:</p>
+    <ul>
+      <li>данные из форм обратной связи — 3 года с момента последнего взаимодействия;</li>
+      <li>данные по договорам — 5 лет с момента истечения срока действия договора либо в соответствии с требованиями законодательства;</li>
+      <li>технические данные (логи, cookies) — не более 1 года;</li>
+      <li>данные для рассылок — до момента отзыва согласия.</li>
+    </ul>
+    <p>6.4. По истечении сроков хранения персональные данные уничтожаются или обезличиваются.</p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="doc-section" id="s7">
+    <h2 class="doc-section__title">7. Передача персональных данных третьим лицам</h2>
+    <p>7.1. Оператор не передаёт персональные данные Пользователей третьим лицам, за исключением следующих случаев:</p>
+    <ul>
+      <li>наличие явного согласия субъекта персональных данных;</li>
+      <li>передача необходима для исполнения договора с Пользователем;</li>
+      <li>передача предусмотрена законодательством РФ (по запросу уполномоченных государственных органов);</li>
+      <li>передача партнёрам и подрядчикам, оказывающим услуги по обеспечению работы Сайтов (хостинг, аналитика, email-сервисы) — исключительно в необходимом объёме, на основании соглашений о конфиденциальности.</li>
+    </ul>
+    <p>7.2. Трансграничная передача персональных данных осуществляется только при условии обеспечения иностранным государством или иностранным лицом адекватной защиты прав субъектов персональных данных и при наличии согласия субъекта либо в иных случаях, предусмотренных ст. 12 Федерального закона № 152-ФЗ.</p>
+    <p>7.3. Оператор не продаёт персональные данные Пользователей третьим лицам.</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="doc-section" id="s8">
+    <h2 class="doc-section__title">8. Использование файлов Cookies и аналитических технологий</h2>
+    <p>8.1. Сайты используют файлы cookies для корректной работы, улучшения пользовательского опыта и сбора аналитических данных.</p>
+    <p>8.2. Пользователь вправе отключить cookies в настройках своего браузера. Отключение cookies может повлечь ограничение функциональности Сайтов.</p>
+    <p>8.3. На Сайтах могут использоваться сервисы веб-аналитики (Яндекс.Метрика и др.), которые собирают обезличенные статистические данные о посещениях. Данные используются для улучшения работы Сайтов и не позволяют идентифицировать конкретного Пользователя.</p>
+    <div class="info-box">
+      <strong>Используемые типы cookies:</strong><br>
+      • <strong>Необходимые</strong> — обеспечивают корректную работу Сайтов (сессионные данные, безопасность).<br>
+      • <strong>Аналитические</strong> — Яндекс.Метрика, собирают обезличённую статистику посещений.<br>
+      Данные хранятся не более 1 года.
+    </div>
+  </div>
+
+  <!-- Section 9 -->
+  <div class="doc-section" id="s9">
+    <h2 class="doc-section__title">9. Права субъектов персональных данных</h2>
+    <p>9.1. В соответствии с действующим законодательством РФ Пользователь вправе:</p>
+    <ul class="rights-list">
+      <li>получить подтверждение факта обработки своих персональных данных и ознакомиться с ними;</li>
+      <li>потребовать уточнения, обновления или исправления персональных данных;</li>
+      <li>потребовать блокирования или уничтожения персональных данных в случаях, предусмотренных законодательством;</li>
+      <li>отозвать согласие на обработку персональных данных в любой момент;</li>
+      <li>обжаловать действия или бездействие Оператора в Роскомнадзор или суд;</li>
+      <li>получить информацию о третьих лицах, которым переданы персональные данные.</li>
+    </ul>
+    <p>9.2. Для реализации своих прав Пользователь вправе направить письменное обращение по юридическому адресу Оператора или по электронной почте, указанной на Сайтах. Оператор обязан рассмотреть обращение и дать ответ в течение 30 календарных дней.</p>
+  </div>
+
+  <!-- Section 10 -->
+  <div class="doc-section" id="s10">
+    <h2 class="doc-section__title">10. Меры по защите персональных данных</h2>
+    <p>10.1. Оператор принимает необходимые организационные и технические меры для защиты персональных данных, в том числе:</p>
+    <ul>
+      <li>применение протокола шифрования HTTPS;</li>
+      <li>ограничение доступа сотрудников к персональным данным;</li>
+      <li>проведение инструктажей и обучения персонала;</li>
+      <li>ведение внутреннего реестра обработки персональных данных;</li>
+      <li>назначение лица, ответственного за организацию обработки персональных данных.</li>
+    </ul>
+    <p>10.2. В случае выявления факта неправомерной передачи персональных данных, повлёкшей нарушение прав субъектов, Оператор обязуется уведомить Роскомнадзор в сроки, установленные законодательством.</p>
+  </div>
+
+  <!-- Section 11 -->
+  <div class="doc-section" id="s11">
+    <h2 class="doc-section__title">11. Уведомление Роскомнадзора</h2>
+    <p>11.1. Оператор выполняет обязанность по уведомлению Федеральной службы по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) об обработке персональных данных в соответствии с требованиями Федерального закона № 152-ФЗ.</p>
+  </div>
+
+  <!-- Section 12 -->
+  <div class="doc-section" id="s12">
+    <h2 class="doc-section__title">12. Особые условия для несовершеннолетних</h2>
+    <p>12.1. Сайты не предназначены для лиц, не достигших 18 лет. Оператор не осуществляет намеренный сбор персональных данных несовершеннолетних. При обнаружении факта получения данных несовершеннолетнего лица Оператор обязуется их незамедлительно удалить.</p>
+  </div>
+
+  <!-- Section 13 -->
+  <div class="doc-section" id="s13">
+    <h2 class="doc-section__title">13. Изменение политики конфиденциальности</h2>
+    <p>13.1. Оператор оставляет за собой право вносить изменения в настоящую Политику.</p>
+    <p>13.2. Актуальная версия Политики размещается на Сайтах по адресам: prolaprolin.ru и propolimerexpert.ru.</p>
+    <p>13.3. Дата последнего обновления указывается в нижней части данного документа. Продолжение использования Сайтов после публикации изменений означает согласие Пользователя с обновлённой редакцией Политики.</p>
+  </div>
+
+  <!-- Section 14 -->
+  <div class="doc-section" id="s14">
+    <h2 class="doc-section__title">14. Контактная информация</h2>
+    <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь:</p>
+    <div class="operator-card">
+      <dl>
+        <dt>Оператор</dt>
+        <dd>ООО НСТ «ПОЛИМЕР ЭКСПЕРТ»</dd>
+        <dt>Адрес</dt>
+        <dd>350000, Краснодарский край, г. Краснодар, ул. им. Гоголя, д. 80</dd>
+        <dt>Генеральный директор</dt>
+        <dd>Лукиянов Руслан Алексеевич</dd>
+        <dt>Сайты</dt>
+        <dd>prolaprolin.ru, propolimerexpert.ru</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="doc-footer">
+    <p>Последнее обновление: <strong>май 2026 года</strong></p>
+    <p>ООО НСТ «ПОЛИМЕР ЭКСПЕРТ» · ИНН 2308285521 · ОГРН 1222300022340</p>
+  </div>
+
+</main>
+
+</body>
+</html>
