@@ -1,7 +1,6 @@
 import { buildConfig } from "payload";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
-import { localStoragePlugin } from "@payloadcms/storage-local";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -33,12 +32,6 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL,
     },
   }),
-  plugins: [
-    localStoragePlugin({
-      collections: { media: true },
-      uploadDir: path.resolve(dirname, "../../public/uploads"),
-    }),
-  ],
   cors: [
     process.env.FRONTEND_URL || "http://localhost:5173",
     "https://polexpert.ru",
