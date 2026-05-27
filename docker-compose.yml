@@ -1,0 +1,62 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-polimer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-polimer_db}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  cms:
+    build: ./cms
+    restart: always
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-polimer}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-polimer_db}
+      PAYLOAD_SECRET: ${PAYLOAD_SECRET}
+      FRONTEND_URL: https://polexpert.ru
+      NEXT_PUBLIC_SERVER_URL: https://cms.polexpert.ru
+    volumes:
+      - uploads:/app/public/uploads
+    networks:
+      - internal
+
+  nginx:
+    image: nginx:alpine
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - frontend_build:/var/www/frontend:ro
+      - uploads:/var/www/uploads:ro
+      - certbot_www:/var/www/certbot:ro
+    depends_on:
+      - cms
+    networks:
+      - internal
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./nginx/ssl:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    profiles:
+      - certbot
+
+volumes:
+  postgres_data:
+  uploads:
+  frontend_build:
+  certbot_www:
+
+networks:
+  internal:
+    driver: bridge

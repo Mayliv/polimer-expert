@@ -339,10 +339,6 @@ function Applications() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-sm text-white/60">
-          Лапролин допущен для контакта с пищевыми и питьевыми средами — оптимальное решение
-          для food &amp; pharma-объектов.
-        </p>
       </div>
     </section>
   );
@@ -767,7 +763,7 @@ function Footer() {
             <h3 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-[#FFC107]">Контакты</h3>
             <ul className="mt-5 space-y-3 text-sm">
               <li><a href="tel:+79182125000" className="flex items-center gap-2 hover:text-[#FFC107]"><Phone className="h-4 w-4" /> +7 (918) 212-50-00</a></li>
-              <li><a href="mailto:info@polymerexpert.ru" className="flex items-center gap-2 hover:text-[#FFC107]"><Mail className="h-4 w-4" /> info@polymerexpert.ru</a></li>
+              <li><a href="mailto:expert.polimer@ya.ru" className="flex items-center gap-2 hover:text-[#FFC107]"><Mail className="h-4 w-4" /> expert.polimer@ya.ru</a></li>
             </ul>
 
             <div className="mt-6 flex flex-wrap gap-3">
