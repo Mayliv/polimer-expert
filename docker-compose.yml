@@ -19,6 +19,7 @@ services:
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-polimer}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-polimer_db}
       PAYLOAD_SECRET: ${PAYLOAD_SECRET}
+      DB_PUSH: "false"
       FRONTEND_URL: https://polexpert.ru
       NEXT_PUBLIC_SERVER_URL: https://cms.polexpert.ru
     volumes:
