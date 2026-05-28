@@ -27,4 +27,4 @@ COPY --from=deps /app/node_modules ./node_modules
 EXPOSE 3001
 ENV PORT=3001
 ENV HOSTNAME="0.0.0.0"
-CMD ["sh", "-c", "node_modules/.bin/payload migrate && node_modules/.bin/next start --port 3001"]
+CMD ["node_modules/.bin/next", "start", "--port", "3001"]
