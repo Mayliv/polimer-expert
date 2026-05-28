@@ -4,6 +4,7 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  serverExternalPackages: ["drizzle-kit", "@payloadcms/db-postgres", "pg"],
   webpack: (config) => {
     config.resolve.alias["@payload-config"] = path.resolve(
       process.cwd(),
