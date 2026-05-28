@@ -1,14 +1,16 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 import path from "path";
-import { fileURLToPath } from "url";
-
-const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  webpack: (config) => {
+    config.resolve.alias["@payload-config"] = path.resolve(
+      process.cwd(),
+      "src/payload.config.ts"
+    );
+    return config;
+  },
 };
 
-export default withPayload(nextConfig, {
-  configPath: path.resolve(dirname, "./src/payload.config.ts"),
-});
+export default withPayload(nextConfig);
